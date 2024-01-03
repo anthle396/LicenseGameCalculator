@@ -14,6 +14,7 @@
 #include <malloc.h>
 #include <math.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 /**
   * LINESPACE() - displays a line with a given length
@@ -67,7 +68,7 @@ int nCr(int n, int r) {
 int MAX_NUMCOMBO_CALC(int num_amount) {
 	int maxcombo = 0;
 
-	maxcombo = pow(num_amount, num_amount);
+	maxcombo = factorial(num_amount);
 	return maxcombo;
 }
 
@@ -82,5 +83,32 @@ int MAX_OPCOMBO_CALC(int num_amount, int op_amount) {
 
 	maxcombo = pow(op_amount, num_amount - 1);
 	return maxcombo;
+}
+
+/**
+  * OP_Calculate() - Calculates the value of 2 integer numbers based on the op
+  *
+  * @param  char op - Calculates the expression given this operator on the two numbers
+  * @param  int num1 - Enters the first number to be calculated
+  * @param  int num2 - Enters the second number to be calculated
+  * @return the calculated value back
+  */
+int OP_Calculate(char op, int num1, int num2) {
+    int calc_value = 0;
+    switch op {
+        case '+':
+            calc_value = num1 + num2; 
+            break;
+        case '-':
+            calc_value = num1 - num2; 
+            break;
+        case '*':
+            calc_value = num1 * num2; 
+            break;
+        case '/':
+            calc_value = num1 / num2; 
+            break;
+    }
+    return calc_value;
 }
 

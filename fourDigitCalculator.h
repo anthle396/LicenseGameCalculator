@@ -63,4 +63,13 @@ int MAX_NUMCOMBO_CALC(int num_amount);
   */
 int MAX_OPCOMBO_CALC(int num_amount, int op_amount);
 
+/**
+  * OP_Calculate() - Calculates the value of 2 integer numbers based on the op
+  *
+  * @param  char op - Calculates the expression given this operator on the two numbers
+  * @param  int num1 - Enters the first number to be calculated
+  * @param  int num2 - Enters the second number to be calculated
+  * @return the calculated value back
+  */
+int OP_Calculate(char op, int num1, int num2); 
 #endif

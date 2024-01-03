@@ -9,6 +9,7 @@
 
 #include "fourDigitCalculator.h"
 #include <string.h>
+#include <stdbool.h>
 #include <malloc.h>
 #include <time.h>
 #include <stdio.h>
@@ -39,6 +40,8 @@ int main() {
 	maxcombo_ops = MAX_OPCOMBO_CALC(DIGIT_AMOUNT, MAX_OPS);
 	printf("INFO[MAX_OPCOMBO_CALC()]:  Unique combination possibilities = %d\n", maxcombo_ops);
 	LINESPACE(MAXLINE);
+
+	printf("INFO[main()]:	Calculating...\n");
 
 	return 0;
 }
